@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "1a1133e3-0130-426b-a112-b575cac315cb",
+		"name": "JiraAssignmentWeek1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JiraIssueswithin24hrs",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "hNIE5VEbHEzUXH8Arjf62DFC",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "RestAPIJira@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?jql=project=AP%26created>=-24h",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=AP%26created>=-24h"
+						},
+						{
+							"key": "jql",
+							"value": "created>=-1h",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllJiraIssue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "dlKn8C1HhhLuKzo7taxU7250",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "RestAPIJira@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/issues/",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"issues",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
